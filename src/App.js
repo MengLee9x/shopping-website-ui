@@ -14,7 +14,6 @@ function App() {
     <StyledContainer>
       <Typography />
       <Router>
-
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
