@@ -14,22 +14,6 @@ function App() {
     <StyledContainer>
       <Typography />
       <Router>
-<<<<<<< HEAD
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-          </ul>
-        </nav>
-=======
->>>>>>> 431442927996b7724b26b83cdbfd98f7465da719
 
         <Routes>
           <Route path="/" element={<HomePage />} />
