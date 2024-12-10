@@ -14,6 +14,7 @@ function App() {
     <StyledContainer>
       <Typography />
       <Router>
+<<<<<<< HEAD
         <nav>
           <ul>
             <li>
@@ -27,6 +28,8 @@ function App() {
             </li>
           </ul>
         </nav>
+=======
+>>>>>>> 431442927996b7724b26b83cdbfd98f7465da719
 
         <Routes>
           <Route path="/" element={<HomePage />} />
