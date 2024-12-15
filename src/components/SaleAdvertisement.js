@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import ShopNowButton from "./ShopNowButton"
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -8,21 +9,46 @@ const StyledWrapper = styled.div`
 
     .image {
         width: 50%;
+        position: relative;
     }
-    .notification {
+    .sale {
+        position: relative;
         width: 50%;
-        padding: 130px 200px 70px 155px;
+        z-index: 10;
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        span {
+            display: block;
+        }
 
         .sale-banner-text {
-            display: flex;
-            flex-direction: column;
-            font-weight: 900;
+            position: relative;
             font-size: 110px;
-            word-spacing: 100vw;
-            margin-bottom: 15px;
-            line-height: 140px;
-            z-index: 10;
+            line-height: 120px;
+            color: black;
+            word-spacing: -20px;
+            z-index: 10; 
         }
+
+        .sale-description {
+            font-size: 1rem;
+        }
+
+        .tilted-background-white {
+            background-color: #fff;
+            transform: rotate(-2deg);
+            position: absolute;
+            width: 60%;
+            height: 10%;
+            top: 45px;
+            left: 40px;
+            z-index: 1;
+        }
+
     }
 `
 
@@ -30,24 +56,24 @@ const SaleAdvertisement = () => {
 
     return (
         <StyledWrapper>
-            <div className="image">Hello</div>
-            <div className="notification">
-                <div className="sale-banner-text">
-                    <div>PAYDAY</div>
-                    <div>
-                        SALE NOW
-                    </div>
-                </div>
-                <div className="notification-content">
-                    Spend minimal $100 get 30% off
-                    voucher code for your next purchase
-                    <span>1 June - 10 June 2021</span>
-                    *Terms & Conditions apply
-                </div>
-                <div className="">
+            <div className="image"></div>
+            
+            <section className="sale">
+                <h1 className="sale-banner-text">
+                    <span>PAYDAY</span>
+                    <span>SALE NOW</span>
+                <div className="tilted-background-white"></div>
 
-                </div>
-            </div>
+                </h1>
+                <p className="sale-description">
+                    <span>Spend minimal $100 get 30% off</span>
+                    <span>voucher code for your next purchase</span>
+                </p>
+                <p><strong>1 June - 10 June 2021</strong></p>
+                <p>*Terms & Conditions apply</p>
+                    
+                <ShopNowButton />
+            </section>
         </StyledWrapper>
     )
 }

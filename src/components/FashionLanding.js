@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import ShopNowButton from "./ShopNowButton";
 
 const StyledContainer = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -82,20 +83,6 @@ const StyledContainer = styled.div`
       top: 175px;
       left: 45px;
     }
-
-    .shop-now-btn {
-      position: absolute;
-      bottom: 50px;
-      left: 55px;
-      color: #fff;
-      background-color: #000000;
-      border-radius: 4.75px;
-      height: 38.95px;
-      border: none;
-      font-weight: 500;
-      font-size: 14.25px;
-      padding: 10px 16px;
-    }
   }
 
   .brand-list {
@@ -175,7 +162,7 @@ const FashionLanding = () => {
               CLOTHES.</div>
             <div> Live for influential and Innovative fashion!</div>
           </div>
-          <button className="shop-now-btn">SHOP NOW</button>
+          <ShopNowButton />
           <div className="tilted-background-white"></div>
           <div className="titled-background-yellow"></div>
         </div>
