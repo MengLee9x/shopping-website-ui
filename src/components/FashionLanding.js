@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { useState } from "react";
 import ShopNowButton from "./ShopNowButton";
+import NewArrivalsSection from "./NewArrivalsSection";
+import TrendingDealsSelection from "./TrendingDealsSelection";
+import AppDownloadPromo from "./AppDownloadPromo";
 
 const StyledContainer = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -93,49 +96,6 @@ const StyledContainer = styled.div`
     padding: 20px 80px;
     align-items: center;
   }
-
-  .second-section-header {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 70px;
-
-    .new-arrivals {
-      background-color: green;
-      justify-content: flex-end;
-      width: 40%;
-      margin-bottom: 40px;
-    }
-
-    .card-list {
-      display: flex;
-      flex-direction: row;
-      gap: 80px;
-
-      .card {
-        .image-container {
-          height: 330px;
-          width: 230px;
-          border-radius: 10px;
-          background-color: grey;
-        }
-
-        .card-content {
-          margin-top: 14px;
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-          font-weight: 500;
-          font-size: 15px;
-          letter-spacing: -4%;
-
-          .explore-now {
-            color: #7F7F7F;
-            font-size: 11px;
-          }
-        }
-      }
-    }
-  }
 `;
 
 const FashionLanding = () => {
@@ -175,36 +135,9 @@ const FashionLanding = () => {
         <div>Brand</div>
         <div>Brand</div>
       </div>
-      <div className="second-section-header">
-        <div className="new-arrivals">Icon</div>
-        <div className="card-list">
-        <div className="card">
-          <div className="image-container">Yellow Girl</div>
-          <div className="card-content">
-            <div>Hoodies & Sweatshirt</div>
-            <div className="explore-now">Explore Now!</div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="image-container">Yellow Girl</div>
-          <div className="card-content">
-            <div>Hoodies & Sweatshirt</div>
-            <div className="explore-now">Explore Now!</div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="image-container">Yellow Girl</div>
-          <div className="card-content">
-            <div>Hoodies & Sweatshirt</div>
-            <div className="explore-now">Explore Now!</div>
-          </div>
-        </div>
-
-      </div>
-      </div>
-
-      
-
+      <NewArrivalsSection />
+      <TrendingDealsSelection />
+      <AppDownloadPromo />
     </StyledContainer>
   );
 };
