@@ -4,13 +4,18 @@ import ShopNowButton from "./ShopNowButton"
 const StyledWrapper = styled.div`
     display: flex;
     background: conic-gradient(#E0C340, #DFC23E, #E1C441, #E3C743, #E4C542);
-    height: 968px;
     font-size: 40px;
 
-    .image {
-        width: 50%;
-        position: relative;
+    .image-container {
+        flex: 1;
     }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .sale {
         position: relative;
         width: 50%;
@@ -48,7 +53,6 @@ const StyledWrapper = styled.div`
             left: 40px;
             z-index: 1;
         }
-
     }
 `
 
@@ -56,13 +60,14 @@ const SaleAdvertisement = () => {
 
     return (
         <StyledWrapper>
-            <div className="image"></div>
-            
+            <section className="image-container">
+                <img src="/images/yellow-girl.png" alt="yellow-girl" className="image" />
+            </section>
             <section className="sale">
                 <h1 className="sale-banner-text">
                     <span>PAYDAY</span>
                     <span>SALE NOW</span>
-                <div className="tilted-background-white"></div>
+                    <div className="tilted-background-white"></div>
 
                 </h1>
                 <p className="sale-description">
@@ -71,7 +76,7 @@ const SaleAdvertisement = () => {
                 </p>
                 <p><strong>1 June - 10 June 2021</strong></p>
                 <p>*Terms & Conditions apply</p>
-                    
+
                 <ShopNowButton />
             </section>
         </StyledWrapper>
