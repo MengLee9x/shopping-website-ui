@@ -9,9 +9,7 @@ const StyledWrapper = styled.div`
 const HomePage = () => {
   return (
     <StyledWrapper>
-      <div className="landing-page">
-        <FashionLanding />
-      </div>
+      <FashionLanding />
     </StyledWrapper>
   );
 };

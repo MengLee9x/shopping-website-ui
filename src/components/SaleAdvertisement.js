@@ -17,41 +17,61 @@ const StyledWrapper = styled.div`
     }
 
     .sale {
-        position: relative;
+        padding: 100px 80px;
         width: 50%;
-        z-index: 10;
+        box-sizing: border-box;
+    
+        h1 {
+            margin-top: 0;
+        }
 
         p {
             margin-bottom: 0;
             margin-top: 0;
-        }
-
-        span {
-            display: block;
+            font-size: 27px;
+            color: black;
         }
 
         .sale-banner-text {
             position: relative;
-            font-size: 110px;
-            line-height: 120px;
+            font-size: 100px;
             color: black;
-            word-spacing: -20px;
-            z-index: 10; 
+            line-height: 120px;
+            word-spacing: -5px;
+            
+            span {
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+
+            .tilted-background-white {
+                background-color: #fff;
+                transform: rotate(-2deg);
+                position: absolute;
+                width: 72%;
+                height: 46%;
+                top: 3px;
+                left: -15px;
+                z-index: 1;
+            }
         }
 
         .sale-description {
-            font-size: 1rem;
+            span {
+                font-weight: 500;
+                color: #231300;
+                line-height: 40px;
+                display: block;
+            }
         }
 
-        .tilted-background-white {
-            background-color: #fff;
-            transform: rotate(-2deg);
-            position: absolute;
-            width: 60%;
-            height: 10%;
-            top: 45px;
-            left: 40px;
-            z-index: 1;
+        .sale-duration {
+            margin-top: 15px;
+            line-height: 40px;
+            span {
+            display: block;
+            }
         }
     }
 `
@@ -68,16 +88,16 @@ const SaleAdvertisement = () => {
                     <span>PAYDAY</span>
                     <span>SALE NOW</span>
                     <div className="tilted-background-white"></div>
-
                 </h1>
                 <p className="sale-description">
-                    <span>Spend minimal $100 get 30% off</span>
-                    <span>voucher code for your next purchase</span>
+                    <span className="first-line">Spend minimal $100 get 30% off</span>
+                    <span className="second-line">voucher code for your next purchase</span>
                 </p>
-                <p><strong>1 June - 10 June 2021</strong></p>
-                <p>*Terms & Conditions apply</p>
-
-                <ShopNowButton />
+                <p className="sale-duration">
+                    <span><strong>1 June - 10 June 2021</strong></span>
+                    <span>*Terms & Conditions apply</span>
+                </p>
+                <ShopNowButton text="SHOP NOW" />
             </section>
         </StyledWrapper>
     )

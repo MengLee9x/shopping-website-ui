@@ -44,29 +44,34 @@ const StyledContainer = styled.div`
         position: relative;
         background-color: #f4f6f5;
         color: white;
-        height: 405.1px;
+        height: 600px;
         border-radius: 25px;
-        padding-left: 55px;
-        padding-top: 40px;
+        padding: 70px 0 30px 85px;
     
         .banner-greet {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          color: #191818;
-          font-size: 15.2px;
-          font-weight: 400;
+
+          p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #191818;
+          }
     
         .title {
           display: flex;
           flex-direction: column;
           text-align: left;
           font-weight: 900;
-          font-size: 45.6px;
+          font-size: 80px;
           word-spacing: 100vw;
           margin-bottom: 15px;
-          line-height: 65px;
+          line-height: 100px;
           z-index: 10;
+          color: black;
           }
         }
     
@@ -74,64 +79,66 @@ const StyledContainer = styled.div`
           background-color: #fff;
           transform: rotate(-2deg);
           position: absolute;
-          width: 210px;
-          height: 55px;
-          top: 45px;
-          left: 40px;
+          width: 380px;
+          height: 90px;
+          top: 70px;
+          left: 60px;
         }
     
         .titled-background-yellow {
           background-color: #EBD96B;
           transform: rotate(-2deg);
           position: absolute;
-          width: 235px;
-          height: 55px;
-          top: 175px;
-          left: 45px;
+          width: 415px;
+          height: 95px;
+          top: 267px;
+          left: 65px;
         }
 
         .image {
             position: absolute;
-            top: 67px;
-            right: 100px;
+            top: 75px;
+            right: 70px;
+
+            img {
+              width: 700px;
+            }
         }
       }
 `
 
 const HeroSection = () => {
-    const [selectedTab, setSelectedTab] = useState("catalogue")
-
-    return (
-        <StyledContainer>
-            <div className="nav-bar">
-                <div style={{ alignSelf: "center"}}>
-                    <img src="/images/fashion-icon.png" alt="fashion-icon" style={{ height: "42px" }}/>
-                </div>
-                <ul className="tabs-container">
-                    <li className="tab-item">CATALOGUE</li>
-                    <li className="tab-item">FASHION</li>
-                    <li className="tab-item">FAVOURITE</li>
-                    <li className="tab-item">LIFESTYLE</li>
-                    <li className="sign-up">SIGN UP</li>
-                </ul>
-            </div>
-            <div className="banner">
-                <div className="banner-greet">
-                    <div className="title">LET'S
-                        EXPLORE
-                        UNIQUE
-                        CLOTHES.</div>
-                    <div> Live for influential and Innovative fashion!</div>
-                </div>
-                <ShopNowButton />
-                <div className="tilted-background-white"></div>
-                <div className="titled-background-yellow"></div>
-                <div className="image">
-                    <img src="/images/hero-section-girl.png" alt="hero-section" />
-                </div>
-            </div>
-        </StyledContainer>
-    )
+  return (
+    <StyledContainer>
+      <div className="nav-bar">
+        <div style={{ alignSelf: "center" }}>
+          <img src="/images/fashion-icon.png" alt="fashion-icon" style={{ height: "42px" }} />
+        </div>
+        <ul className="tabs-container">
+          <li className="tab-item">CATALOGUE</li>
+          <li className="tab-item">FASHION</li>
+          <li className="tab-item">FAVOURITE</li>
+          <li className="tab-item">LIFESTYLE</li>
+          <li className="sign-up">SIGN UP</li>
+        </ul>
+      </div>
+      <div className="banner">
+        <div className="banner-greet">
+          <div className="title">LET'S
+            EXPLORE
+            UNIQUE
+            CLOTHES.</div>
+          <p className="statement">Live for influential and Innovative fashion!</p>
+        </div>
+        <ShopNowButton text="Shop Now" />
+        <div className="tilted-background-white"></div>
+        <div className="titled-background-yellow"></div>
+        <div className="image">
+          <img src="/images/hero-section-girl.png" alt="hero-section" />
+        </div>
+      </div>
+    </StyledContainer>
+  )
 }
 
 export default HeroSection;
