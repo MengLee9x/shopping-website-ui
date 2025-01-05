@@ -5,17 +5,17 @@ const StyledButton = styled.button`
     margin-top: 20px;
     background-color: #000000;
     border-radius: 4.75px;
-    height: 38.95px;
+    height: 60px;
     border: none;
-    font-weight: 500;
-    font-size: 14.25px;
-    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 16px 25px;
 `
 
-const ShopNowButton = () => {
+const ShopNowButton = ({ text }) => {
     return (
         <StyledButton onClick={() => console.log("shopy shop")}>
-            SHOP NOW
+            {text}
         </StyledButton>
     )
 }
