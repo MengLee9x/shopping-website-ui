@@ -3,8 +3,7 @@ import SaleAdvertisement from "../components/SaleAdvertisement";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  padding-top: 80px;
-  padding-left: 130px;
+  padding: 80px 130px;
 `
 
 const HomePage = () => {
@@ -13,7 +12,6 @@ const HomePage = () => {
       <div className="landing-page">
         <FashionLanding />
       </div>
-      <SaleAdvertisement />
     </StyledWrapper>
   );
 };
