@@ -6,6 +6,7 @@ import SaleAdvertisement from "./SaleAdvertisement";
 import AppDownloadPromo from "./AppDownloadPromo";
 import PromoSignUpForm from "./PromoSignupForm";
 import BrandList from "./BrandList";
+import Footer from "./Footer";
 
 const StyledContainer = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -27,6 +28,7 @@ const FashionLanding = () => {
       <TrendingDealsSelection />
       <AppDownloadPromo />
       <PromoSignUpForm />
+      <Footer />
     </StyledContainer>
   );
 };
